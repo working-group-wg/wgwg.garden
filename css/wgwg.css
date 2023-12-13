@@ -9,6 +9,25 @@
 @import url(../fonts/mona.css);
 
 :root {
+  --fg: #000;
+
   font-family: Inter, sans-serif;
   font-optical-sizing: auto;
+  /* Docs say liga and calt are required to fix issues in Chrome */
+  font-feature-settings: 'liga' 1, 'calt' 1, 'dlig' 1, 'cv06' 1, 'cv11' 1, 'cv12' 1, 'cv13' 1;
+}
+
+h1 {
+  letter-spacing: -0.03em;
+  margin-bottom: 0.4em;
+  margin-top: 4rem;
+  font-size: calc(100vw / 8);
+  line-height: 1.0;
+  font-weight: 600;
+  margin-left: calc(3rem / -19);
+  color: var(--fg);
+}
+
+table {
+  font-feature-settings: 'tnum' 1;
 }
