@@ -9,23 +9,86 @@
 @import url(../fonts/mona.css);
 
 :root {
+  /* colours */
   --fg: #000;
+  --orange-af: color(display-p3 1 0.4529 0.3141);
+  --electric-blue: color(display-p3 0 0.6935 0.973);
+  --super-pink: color(display-p3 1 0.4017 0.7258);
+  --purplish-night: color(display-p3 0.0804 0 0.2217);
+  --deep-night: color(display-p3 0 0.0472 0.1094);
+  --freshest-green: color(display-p3 0 0.9314 0.4951);
+  --very-red: color(display-p3 0.8299 0 0.1919);
+  --intense-purple: color(display-p3 0.195 0 0.5506);
+  --reddish-grey: color(display-p3 0.2517 0.2024 0.1961);
+  --white: #fff;
+
+  /* sizes */
+  --content-width: 57rem;
 
   font-family: Inter, sans-serif;
   font-optical-sizing: auto;
-  /* Docs say liga and calt are required to fix issues in Chrome */
-  font-feature-settings: 'liga' 1, 'calt' 1, 'dlig' 1, 'cv06' 1, 'cv11' 1, 'cv12' 1, 'cv13' 1;
+  /*
+    Docs say liga and calt are required to fix issues in Chrome
+    liga: just for Chrome fix
+    calt: contextual alternates
+    dlig: discretionary ligatures
+    cv06: simplified u
+    cv11: single-story a
+    cv12: compact f
+    cv13: compact t
+  */
+  font-feature-settings: 'liga' 1, 'calt' 1, 'dlig' 1, 'cv06' 1, 'cv11' 1;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body > header {
+  margin: 0 auto 4rem;
+  padding-top: 4rem;
+  max-width: var(--content-width);
+  background: var(--white);
+}
+body.home > header {
+  background: var(--intense-purple);
 }
 
 h1 {
   letter-spacing: -0.03em;
   margin-bottom: 0.4em;
-  margin-top: 4rem;
-  font-size: calc(100vw / 8);
+  margin-top: 0rem;
+  font-size: 8rem;
   line-height: 1.0;
   font-weight: 600;
-  margin-left: calc(3rem / -19);
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--fg);
+}
+body.home h1 {
+  -webkit-text-stroke-color: var(--white);
+  text-align: center;
+}
+
+main {
   color: var(--fg);
+  margin: 1rem auto 0;
+  max-width: var(--content-width);
+  padding: 0 1rem 3rem;
+  font-size: 1.25rem;
+  font-weight: 250;
+  line-height: 1.375;
+}
+
+a {
+  color: var(--electric-blue);
+  font-weight: 400;
+  text-decoration-color: var(--intense-purple);
+  transition: text-decoration-color 500ms;
+}
+a:hover {
+  text-decoration-color: var(--super-pink);
 }
 
 table {
