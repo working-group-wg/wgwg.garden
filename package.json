@@ -5,7 +5,10 @@
   "description": "The WGWG site",
   "author": "Robin Berjon <robin@berjon.com>",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "NODE_ENV=production npx @11ty/eleventy",
+    "watch": "npx @11ty/eleventy --serve"
+  },
   "bin": {},
   "repository": {
     "type": "git",
@@ -27,5 +30,8 @@
   },
   "devDependencies": {
     "eslint": "^8.26.0"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1"
   }
 }

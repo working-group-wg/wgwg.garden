@@ -1,0 +1,14 @@
+
+/* 
+  Fonts
+  • Monaspace: https://monaspace.githubnext.com/
+  • Inter: https://rsms.me/inter/
+*/
+
+@import url(../fonts/inter.css);
+@import url(../fonts/mona.css);
+
+:root {
+  font-family: Inter, sans-serif;
+  font-optical-sizing: auto;
+}
