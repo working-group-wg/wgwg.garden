@@ -1,0 +1,37 @@
+
+/* variables: wght, wdth, slnt */
+@font-face {
+  font-family: "Monaspace Argon";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("MonaspaceArgonVarVF.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Monaspace Krypton";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("MonaspaceKryptonVarVF.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Monaspace Neon";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("MonaspaceNeonVarVF.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Monaspace Radon";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("MonaspaceRadonVarVF.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Monaspace Xenon";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("MonaspaceXenonVarVF.woff2") format("woff2");
+}

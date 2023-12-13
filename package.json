@@ -1,0 +1,31 @@
+{
+  "name": "standards.casa",
+  "private": true,
+  "version": "0.0.1",
+  "description": "The WGWG site",
+  "author": "Robin Berjon <robin@berjon.com>",
+  "license": "MIT",
+  "scripts": {},
+  "bin": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/working-group-wg/working-group-wg.github.io.git"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "mocha": true,
+      "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "overrides": [],
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "script"
+    },
+    "rules": {}
+  },
+  "devDependencies": {
+    "eslint": "^8.26.0"
+  }
+}
