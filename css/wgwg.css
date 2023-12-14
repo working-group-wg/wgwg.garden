@@ -121,6 +121,9 @@ a:hover {
 dt, dt a {
   font-weight: 700;
 }
+dd {
+  margin-bottom: 1rem;
+}
 
 table {
   font-feature-settings: 'tnum' 1;
