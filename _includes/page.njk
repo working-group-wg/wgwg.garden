@@ -8,9 +8,30 @@
     <link rel="icon" href="/img/favicon.png">
   </head>
   <body class="{{  (tags or []) | join(' ')  }}">
-    <header>
-      <h1>{{ title }}</h1>
-    </header>
+    {% set header %}
+      <header>
+        <h1>{{ title }}</h1>
+      </header>
+    {% endset %}
+    {{ header | safe if page.url === '/' }}
+    <nav>
+      {% set nav = [
+          { label: 'Home', url: '/' }
+        ]
+      %}
+      <ul>
+        {% for entry in nav %}
+          <li>
+            {% if entry.url === page.url %}
+              {{ entry.label }}
+            {% else %}
+              <a href="{{ entry.url }}">{{ entry.label }}</a>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    {{ header | safe if page.url !== '/' }}
     <main>
       {{ content | safe }}
     </main>
