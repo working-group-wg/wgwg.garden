@@ -14,6 +14,9 @@ module.exports = function (cfg) {
     });
   });
   return {
+    dir: {
+      output: "docs",
+    },
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
   };
