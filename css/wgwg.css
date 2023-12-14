@@ -40,6 +40,9 @@
   font-feature-settings: 'liga' 1, 'calt' 1, 'dlig' 1, 'cv06' 1, 'cv11' 1;
 }
 
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
@@ -54,10 +57,13 @@ body > header {
 body.home > header {
   background: var(--intense-purple);
 }
+body.wg > header {
+  border-bottom: 1rem solid var(--fg);
+}
 
 h1 {
   letter-spacing: -0.03em;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.2em;
   margin-top: 0rem;
   font-size: 8rem;
   line-height: 1.0;
@@ -74,11 +80,17 @@ body.home h1 {
 main {
   color: var(--fg);
   margin: 1rem auto 0;
+  padding: 0 1rem;
   max-width: var(--content-width);
   padding: 0 1rem 3rem;
   font-size: 1.25rem;
   font-weight: 250;
   line-height: 1.375;
+}
+
+h2 {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
 }
 
 a {
@@ -89,6 +101,10 @@ a {
 }
 a:hover {
   text-decoration-color: var(--super-pink);
+}
+
+dt, dt a {
+  font-weight: 700;
 }
 
 table {

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/wgwg.css">
     <link rel="icon" href="/img/favicon.png">
   </head>
-  <body class="{{ special }}">
+  <body class="{{  (tags or []) | join(' ')  }}">
     <header>
       <h1>{{ title }}</h1>
     </header>

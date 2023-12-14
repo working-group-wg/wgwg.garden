@@ -8,6 +8,13 @@ module.exports = function (cfg) {
   cfg.addPassthroughCopy("**/*.svg");
   cfg.setServerPassthroughCopyBehavior("passthrough");
   cfg.ignores.add("README.md");
+  cfg.addCollection("wgsByTitle", function (collectionApi) {
+    return collectionApi.getFilteredByTag('wg').sort(function (a, b) {
+      return (a.data.title || 'Untitled Group').localeCompare(b.data.title || 'Untitled Group');
+    });
+  });
   return {
+    markdownTemplateEngine: "njk",
+    htmlTemplateEngine: "njk",
   };
 };
